@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-cormorant: 'Cormorant Garamond', Garamond, Georgia, serif;
+  
+  --color-ivory: #F5F3EE;
+  --color-ivory-light: #FAF8F5;
+  --color-ivory-dark: #ECE8E0;
+  --color-charcoal: #111111;
+  --color-charcoal-deep: #171717;
+  --color-charcoal-light: #181818;
+  --color-charcoal-muted: #202020;
+  --color-bronze: #B89A68;
+  --color-bronze-light: #CBB184;
+  --color-bronze-dark: #9F8252;
+  --color-stone: #6F6D68;
+  --color-stone-light: #A8A49C;
+  --color-stone-dark: #3A3936;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal-deep);
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+html.dark body {
+  background-color: #111111;
+  color: #F5F3EE;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+.font-editorial {
+  font-family: var(--font-cormorant);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F3EE;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B89A68;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9F8252;
+}
+
+/* Horizontal Moving Testimonials Marquee */
+@keyframes marquee-forward {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-infinite {
+  display: flex;
+  width: max-content;
+  animation: marquee-forward 45s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-infinite:hover {
+  animation-play-state: paused;
+}
+
