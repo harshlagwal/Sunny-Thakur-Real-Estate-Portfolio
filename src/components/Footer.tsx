@@ -127,6 +127,16 @@ export const Footer: React.FC = () => {
             </button>
           </div>
         </div>
+
+        {/* Built By Watermark */}
+        <div className="mt-6 text-center">
+          <p className="text-[11px] text-white/30 tracking-wider font-medium">
+            Built By{' '}
+            <span className="text-[#B89A68]/60 hover:text-[#B89A68] transition-colors">
+              Harsh Lagwal
+            </span>
+          </p>
+        </div>
       </div>
     </footer>
   );
