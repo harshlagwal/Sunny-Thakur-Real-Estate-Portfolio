@@ -1,0 +1,8 @@
+# robots.txt — Sunny Thakur Real Estate Portfolio
+# https://sunny-thakur-real-estate.vercel.app/
+
+User-agent: *
+Allow: /
+
+# Sitemap location for search engines
+Sitemap: https://sunny-thakur-real-estate.vercel.app/sitemap.xml
